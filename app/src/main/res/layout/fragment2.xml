@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Switch
+        android:id="@+id/sw_window"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="车窗"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_windows"
+        app:layout_constraintStart_toStartOf="@+id/imageView_windows"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_windows" />
+
+    <ImageView
+        android:id="@+id/imageView_door"
+        android:layout_width="186dp"
+        android:layout_height="197dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:srcCompat="@drawable/ic_door_close" />
+
+    <ImageView
+        android:id="@+id/imageView_trunk"
+        android:layout_width="62dp"
+        android:layout_height="78dp"
+        android:layout_marginEnd="44dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_doorlock"
+        app:layout_constraintEnd_toStartOf="@+id/imageView_doorlock"
+        app:layout_constraintTop_toTopOf="@+id/imageView_doorlock"
+        app:srcCompat="@drawable/ic_trunk_close" />
+
+    <ImageView
+        android:id="@+id/imageView_doorlock"
+        android:layout_width="62dp"
+        android:layout_height="59dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:srcCompat="@drawable/ic_door_lock" />
+
+    <ImageView
+        android:id="@+id/imageView_windows"
+        android:layout_width="62dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="44dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_doorlock"
+        app:layout_constraintStart_toEndOf="@+id/imageView_doorlock"
+        app:layout_constraintTop_toTopOf="@+id/imageView_doorlock"
+        app:srcCompat="@drawable/ic_windows_close" />
+
+    <Switch
+        android:id="@+id/sw_righton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:text="右上车门"
+        app:layout_constraintBottom_toTopOf="@+id/sw_leftdown"
+        app:layout_constraintEnd_toEndOf="@+id/sw_leftdown"
+        app:layout_constraintStart_toStartOf="@+id/sw_leftdown" />
+
+    <Switch
+        android:id="@+id/sw_lefton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:text="左上车门"
+        app:layout_constraintBottom_toTopOf="@+id/sw_righton"
+        app:layout_constraintEnd_toEndOf="@+id/sw_righton"
+        app:layout_constraintStart_toStartOf="@+id/sw_righton" />
+
+    <Switch
+        android:id="@+id/sw_rightdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:text="右下车门"
+        app:layout_constraintEnd_toEndOf="@+id/sw_leftdown"
+        app:layout_constraintStart_toStartOf="@+id/sw_leftdown"
+        app:layout_constraintTop_toBottomOf="@+id/sw_leftdown" />
+
+    <Switch
+        android:id="@+id/sw_leftdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:text="左下车门"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_door"
+        app:layout_constraintEnd_toStartOf="@+id/imageView_door"
+        app:layout_constraintTop_toTopOf="@+id/imageView_door"
+        app:layout_constraintVertical_bias="0.63" />
+
+    <Switch
+        android:id="@+id/sw_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="后备箱"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_trunk"
+        app:layout_constraintStart_toStartOf="@+id/imageView_trunk"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_trunk" />
+
+    <Switch
+        android:id="@+id/sw_door"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="车门"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_doorlock"
+        app:layout_constraintStart_toStartOf="@+id/imageView_doorlock"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_doorlock" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.80878556" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
