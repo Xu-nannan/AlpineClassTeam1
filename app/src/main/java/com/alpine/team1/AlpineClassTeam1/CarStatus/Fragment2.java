@@ -81,91 +81,128 @@ public class Fragment2 extends Fragment implements ServiceConnection, CompoundBu
                 aSwitch_door.setChecked(state.isChemensuo());
                 aSwitch_window.setChecked(state.isChechuang());
 
-                int i = 15;
-                if (state.isChemeng1()) {
+                Log.d(TAG, 1+String.valueOf(state.isChemeng1()));
+                Log.d(TAG, 2+String.valueOf(state.isChemeng2()));
+                Log.d(TAG, 3+String.valueOf(state.isChemeng3()));
+                Log.d(TAG, 4+String.valueOf(state.isChemeng4()));
+
+                int i;
+                if (state.isChemeng1()==true & state.isChemeng2()==false & state.isChemeng3()==false & state.isChemeng4()==false) {
                     i = 0;
-                } else if (state.isChemeng1()&state.isChemeng2()){
+                    imageView_door.setImageResource(R.drawable.ic_door_open1);
+                    Log.d(TAG, String.valueOf(i));
+                } if (state.isChemeng1()==true & state.isChemeng2()==true & state.isChemeng3()==false & state.isChemeng4()==false){
                     i = 1;
-                }else if (state.isChemeng1()&state.isChemeng2()&state.isChemeng3()){
+                    imageView_door.setImageResource(R.drawable.ic_door_open2);
+                    Log.d(TAG, String.valueOf(i));
+                }if (state.isChemeng1()==true & state.isChemeng2()==true & state.isChemeng3()==true & state.isChemeng4()==false) {
                     i = 2;
-                } else if (state.isChemeng3()){
+                    imageView_door.setImageResource(R.drawable.ic_door_open3);
+                    Log.d(TAG, String.valueOf(i));
+                } if (state.isChemeng1()==false & state.isChemeng2()==false & state.isChemeng3()==true &state.isChemeng4()==false){
                     i = 3;
-                } else if (state.isChemeng3()&state.isChemeng4()){
+                    imageView_door.setImageResource(R.drawable.ic_door_open4);
+                    Log.d(TAG, String.valueOf(i));
+                }if (state.isChemeng1()==false & state.isChemeng2()==false & state.isChemeng3()==true & state.isChemeng4()==true){
                     i = 4;
-                }else if (state.isChemeng2()&state.isChemeng3()&state.isChemeng4()){
+                    imageView_door.setImageResource(R.drawable.ic_door_open5);
+                    Log.d(TAG, String.valueOf(i));
+                }if (state.isChemeng1()==false & state.isChemeng2()==true & state.isChemeng3()==true & state.isChemeng4()==true){
                     i = 5;
-                }else if (state.isChemeng1()&state.isChemeng3()&state.isChemeng4()){
+                    imageView_door.setImageResource(R.drawable.ic_door_open6);
+                    Log.d(TAG, String.valueOf(i));
+                }if (state.isChemeng1()==true & state.isChemeng2()==false & state.isChemeng3()==true & state.isChemeng4()==true){
                     i = 6;
-                }else if (state.isChemeng1()&&state.isChemeng4()){
+                    imageView_door.setImageResource(R.drawable.ic_door_open7);
+                    Log.d(TAG, String.valueOf(i));
+                }if (state.isChemeng1()==true & state.isChemeng2()==false & state.isChemeng3()==false & state.isChemeng4()==true){
                     i = 7;
-                }else if (state.isChemeng1()&state.isChemeng3()){
+                    imageView_door.setImageResource(R.drawable.ic_door_open8);
+                    Log.d(TAG, String.valueOf(i));
+                }if (state.isChemeng1()==true & state.isChemeng2()==false & state.isChemeng3()==true & state.isChemeng4()==false){
                     i = 8;
-                }else if (state.isChemeng1()&state.isChemeng2()&state.isChemeng4()){
+                    imageView_door.setImageResource(R.drawable.ic_door_open9);
+                    Log.d(TAG, String.valueOf(i));
+                }if (state.isChemeng1()==true & state.isChemeng2()==true & state.isChemeng3()==false & state.isChemeng4()==true){
                     i = 9;
-                }else if (state.isChemeng2()&state.isChemeng3()){
+                    imageView_door.setImageResource(R.drawable.ic_door_open10);
+                    Log.d(TAG, String.valueOf(i));
+                }if (state.isChemeng1()==false & state.isChemeng2()==true & state.isChemeng3()==true & state.isChemeng4()==false){
                     i = 10;
-                }
-                else if (state.isChemeng2()){
+                    imageView_door.setImageResource(R.drawable.ic_door_open11);
+                    Log.d(TAG, String.valueOf(i));
+                }if (state.isChemeng1()==false & state.isChemeng2()==true & state.isChemeng3()==false & state.isChemeng4()==false){
                     i = 11;
-                }else if (state.isChemeng4()){
+                    imageView_door.setImageResource(R.drawable.ic_door_open12);
+                    Log.d(TAG, String.valueOf(i));
+                }if (state.isChemeng1()==false & state.isChemeng2()==false & state.isChemeng3()==false & state.isChemeng4()==true){
                     i = 12;
-                }
-                else if (state.isChemeng2()&state.isChemeng4()){
+                    imageView_door.setImageResource(R.drawable.ic_door_open13);
+                    Log.d(TAG, String.valueOf(i));
+                }if (state.isChemeng1()==false & state.isChemeng2()==true & state.isChemeng3()==false & state.isChemeng4()==true){
                     i = 13;
-                }else if (state.isChemeng1()&state.isChemeng2()&state.isChemeng3()&state.isChemeng4()){
+                    imageView_door.setImageResource(R.drawable.ic_door_open14);
+                    Log.d(TAG, String.valueOf(i));
+                }if (state.isChemeng1()==true & state.isChemeng2()==true & state.isChemeng3()==true & state.isChemeng4()==true){
                     i = 14;
+                    imageView_door.setImageResource(R.drawable.ic_door_open15);
+                    Log.d(TAG, String.valueOf(i));
+                }if (state.isChemeng1()==false & state.isChemeng2()==false & state.isChemeng3()==false & state.isChemeng4()==false){
+                    i=15;
+                    Log.d(TAG, String.valueOf(i));
+                    imageView_door.setImageResource(R.drawable.ic_door_close);
                 }
 
-                switch (i){
-                    case 0:
-                        imageView_door.setImageResource(R.drawable.ic_door_open1);
-                        break;
-                    case 1:
-                        imageView_door.setImageResource(R.drawable.ic_door_open2);
-                        break;
-                    case 2:
-                        imageView_door.setImageResource(R.drawable.ic_door_open3);
-                        break;
-                    case 3:
-                        imageView_door.setImageResource(R.drawable.ic_door_open4);
-                        break;
-                    case 4:
-                        imageView_door.setImageResource(R.drawable.ic_door_open5);
-                        break;
-                    case 5:
-                        imageView_door.setImageResource(R.drawable.ic_door_open6);
-                        break;
-                    case 6:
-                        imageView_door.setImageResource(R.drawable.ic_door_open7);
-                        break;
-                    case 7:
-                        imageView_door.setImageResource(R.drawable.ic_door_open8);
-                        break;
-                    case 8:
-                        imageView_door.setImageResource(R.drawable.ic_door_open9);
-                        break;
-                    case 9:
-                        imageView_door.setImageResource(R.drawable.ic_door_open10);
-                        break;
-                    case 10:
-                        imageView_door.setImageResource(R.drawable.ic_door_open11);
-                        break;
-                    case 11:
-                        imageView_door.setImageResource(R.drawable.ic_door_open12);
-                        break;
-                    case 12:
-                        imageView_door.setImageResource(R.drawable.ic_door_open13);
-                        break;
-                    case 13:
-                        imageView_door.setImageResource(R.drawable.ic_door_open14);
-                        break;
-                    case 14:
-                        imageView_door.setImageResource(R.drawable.ic_door_open15);
-                        break;
-                    default:
-                        imageView_door.setImageResource(R.drawable.ic_door_close);
-                        break;
-                }
+//                switch (i){
+//                    case 0:
+//                        imageView_door.setImageResource(R.drawable.ic_door_open1);
+//                        break;
+//                    case 1:
+//                        imageView_door.setImageResource(R.drawable.ic_door_open2);
+//                        break;
+//                    case 2:
+//                        imageView_door.setImageResource(R.drawable.ic_door_open3);
+//                        break;
+//                    case 3:
+//                        imageView_door.setImageResource(R.drawable.ic_door_open4);
+//                        break;
+//                    case 4:
+//                        imageView_door.setImageResource(R.drawable.ic_door_open5);
+//                        break;
+//                    case 5:
+//                        imageView_door.setImageResource(R.drawable.ic_door_open6);
+//                        break;
+//                    case 6:
+//                        imageView_door.setImageResource(R.drawable.ic_door_open7);
+//                        break;
+//                    case 7:
+//                        imageView_door.setImageResource(R.drawable.ic_door_open8);
+//                        break;
+//                    case 8:
+//                        imageView_door.setImageResource(R.drawable.ic_door_open9);
+//                        break;
+//                    case 9:
+//                        imageView_door.setImageResource(R.drawable.ic_door_open10);
+//                        break;
+//                    case 10:
+//                        imageView_door.setImageResource(R.drawable.ic_door_open11);
+//                        break;
+//                    case 11:
+//                        imageView_door.setImageResource(R.drawable.ic_door_open12);
+//                        break;
+//                    case 12:
+//                        imageView_door.setImageResource(R.drawable.ic_door_open13);
+//                        break;
+//                    case 13:
+//                        imageView_door.setImageResource(R.drawable.ic_door_open14);
+//                        break;
+//                    case 14:
+//                        imageView_door.setImageResource(R.drawable.ic_door_open15);
+//                        break;
+//                    default:
+//                        imageView_door.setImageResource(R.drawable.ic_door_close);
+//                        break;
+//                }
 
                 if (state.isChemensuo()) imageView_doorlock.setImageResource(R.drawable.ic_door_unlock);
                 else imageView_doorlock.setImageResource(R.drawable.ic_door_lock);

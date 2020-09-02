@@ -4,16 +4,15 @@
     <item
         android:id="@+id/id1"
         android:icon="@drawable/ic_icon_black1"
-        android:title="标题1" />
+        android:title="汽车状态" />
 
     <item
         android:id="@+id/id2"
         android:icon="@drawable/ic_icon_black2"
-        android:title="标题2" />
+        android:title="外部控制" />
 
     <item
         android:id="@+id/id3"
         android:icon="@drawable/ic_icon_black3"
-        android:title="标题3" />
-
+        android:title="内部控制"/>
 </menu>
